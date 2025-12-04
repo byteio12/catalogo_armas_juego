@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector Armas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Selector de Armas</h1>
+
+  <div id="arma1" class="label">Arma 1: ?</div>
+  <div id="arma2" class="label">Arma 2: ?</div>
+  <div id="arma3" class="label">Arma 3: ?</div>
+  <div id="arma4" class="label">Arma 4: ?</div>
+  <div id="arma5" class="label">Arma 5: ?</div>
+
+  <button onclick="elegirArmas()">Elegir Armas</button>
+
+  <script>
+    const armas = [
+      'MINIMI MOD', 'M16', 'FX-05 TRIPE CARGADOR', 'Saiga 12', 'Galil Ace Mod', 'TEC-9',
+      'M76', 'M110', 'Draco Gold', 'MP5A4', 'MP 45', 'MP5K', 'Vector CRB', 'AUG 43',
+      'SBR556', 'Honey Badger', 'Fightliter MCR', 'FAL MOD', 'M249'
+    ];
+
+    const francotirador = ['Barret X4'];
+    const explosion = ['Lanzagranadas', 'RPG-7'];
+
+    function elegirArmas() {
+      let disponibles = [...armas];
+      const seleccionadas = [];
+
+      const sniper = francotirador[Math.floor(Math.random() * francotirador.length)];
+      seleccionadas.push(sniper);
+
+      const boom = explosion[Math.floor(Math.random() * explosion.length)];
+      seleccionadas.push(boom);
+
+      disponibles = disponibles.filter(a => a !== sniper && a !== boom);
+
+      while (seleccionadas.length < 5) {
+        const index = Math.floor(Math.random() * disponibles.length);
+        seleccionadas.push(disponibles[index]);
+        disponibles.splice(index, 1);
+      }
+
+      seleccionadas.sort(() => Math.random() - 0.5);
+
+      document.getElementById("arma1").textContent = `Arma 1: ${seleccionadas[0]}`;
+      document.getElementById("arma2").textContent = `Arma 2: ${seleccionadas[1]}`;
+      document.getElementById("arma3").textContent = `Arma 3: ${seleccionadas[2]}`;
+      document.getElementById("arma4").textContent = `Arma 4: ${seleccionadas[3]}`;
+      document.getElementById("arma5").textContent = `Arma 5: ${seleccionadas[4]}`;
+    }
+  </script>
+
+</body>
+</html>
