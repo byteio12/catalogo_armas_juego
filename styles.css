@@ -1,0 +1,35 @@
+body {
+  background-color: #1E4A26;
+  font-family: 'Military Poster', sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  color: #E6DD98;
+  font-size: 32px;
+}
+
+.label {
+  background-color: #312006;
+  color: #E6DD98;
+  padding: 28px;
+  margin: 28px auto;
+  width: 700px;
+  border-radius: 14px;
+  font-size: 36px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+button {
+  background-color: #5C400E;
+  color: #E6DD98;
+  font-size: 32px;
+  padding: 22px 60px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background-color: #7a5b1a;
+}
