@@ -1,21 +1,20 @@
-/* Tu código original se mantiene igual */
 body {
   background-color: #1E4A26;
   font-family: 'Military Poster', sans-serif;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;   /* CORREGIDO */
   color: #E6DD98;
-  font-size: 32px;
+  font-size: 26px;
 }
 
 .label {
   background-color: #312006;
   color: #E6DD98;
-  padding: 28px;
+  padding: 20px;
   margin: 28px auto;
-  width: 700px;
+  width: 600px;        /* CORREGIDO */
   border-radius: 14px;
-  font-size: 36px;
+  font-size: 30px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.5);
 }
 
