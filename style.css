@@ -37,7 +37,25 @@ button:hover {
 
 /* OPCIONAL: Para que las armas Gold resalten con un brillo suave */
 .gold-item {
-  color: #FFD700; /* Oro puro */
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  color: #FFD700;
   font-weight: bold;
+  text-shadow:
+    0 0 6px #FFD700,
+    0 0 12px #FFB700,
+    0 0 20px rgba(255, 215, 0, 0.8);
+  animation: goldGlow 1.5s infinite alternate;
 }
+
+@keyframes goldGlow {
+  from {
+    text-shadow:
+      0 0 6px #FFD700,
+      0 0 12px #FFB700;
+  }
+  to {
+    text-shadow:
+      0 0 12px #FFD700,
+      0 0 25px #FFB700;
+  }
+}
+
