@@ -1,3 +1,4 @@
+/* Tu código original se mantiene igual */
 body {
   background-color: #1E4A26;
   font-family: 'Military Poster', sans-serif;
@@ -32,4 +33,11 @@ button {
 
 button:hover {
   background-color: #7a5b1a;
+}
+
+/* OPCIONAL: Para que las armas Gold resalten con un brillo suave */
+.gold-item {
+  color: #FFD700; /* Oro puro */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  font-weight: bold;
 }
