@@ -57,13 +57,19 @@
       ];
 
       for (let i = 0; i < 5; i++) {
+        const elemento = document.getElementById(`arma${i + 1}`);
         let nombreDisplay = seleccion[i];
-        
-        if (nombreDisplay.includes("GOLD") || nombreDisplay.includes("Millonaria")) {
-          nombreDisplay = "⭐ " + nombreDisplay;
-        }
 
-        document.getElementById(`arma${i + 1}`).textContent = `Slot ${i + 1}: ${nombreDisplay}`;
-      }
+ 
+      elemento.classList.remove("gold-item");
+
+    if (nombreDisplay.includes("GOLD") || nombreDisplay.includes("Millonaria")) {
+        nombreDisplay = "⭐ " + nombreDisplay;
+        elemento.classList.add("gold-item");
+  }
+
+  elemento.textContent = `Slot ${i + 1}: ${nombreDisplay}`;
+}
+
     }
 </script>
