@@ -72,5 +72,9 @@
   elemento.textContent = `Slot ${i + 1}: ${nombreDisplay}`;
 }
 
+document.getElementById("historial").innerHTML =
+  "<strong>Última selección:</strong><br>" +
+  seleccion.map(a => "• " + a).join("<br>");
+
     }
 </script>
