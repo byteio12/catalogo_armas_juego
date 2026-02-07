@@ -26,12 +26,20 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 button:hover {
   background-color: #7a5b1a;
+}
+
+button:active {
+  transform: scale(0.96);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
 }
 
 /* OPCIONAL: Para que las armas Gold resalten con un brillo suave */
